@@ -43,10 +43,13 @@ $quotesHeadingColor: rgba(0, 158, 119, 0.839);
     @include container;
     display: flex;
     justify-content: center;
+
 }
 .Hero {
     .HeroWrapper {
         @include container;
+        padding-left: 0;
+        padding-right: 0;
         .imageWrapper > .image {
             width: 100%;
             height: 15rem;
@@ -211,6 +214,7 @@ footer {
             flex-direction: row;
             gap: 1rem;
             margin-bottom: 2rem;
+            cursor: pointer;
         }
         &__policy {
             color: $fontColor;
@@ -234,23 +238,10 @@ footer {
     }
     .Hero {
         .HeroWrapper {
-            .imageWrapper {
-                position: relative;
-                background-color: #fff;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    background-color: $darkGreen;
-                    width: 100%;
-                    height: 100%;
-                }
-                .image {
-                    width: 50%;
-                    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
-                }
+            .imageWrapper .image {
+                background-image: url("images/hero-desktop.png");
             }
+
             .container {
                 &__heading::after {
                     width: 13%;
@@ -292,10 +283,11 @@ footer {
 
 // Laptops
 @media (min-width:1024px) {
-    .Nav .Advantages .container,
+    .Advantages .container,
     .Bylaws .container,
-    .Hero .HeroWrapper .container, footer .container
-    {
+    .Hero .HeroWrapper .container,
+    .Nav,
+    footer .container {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
@@ -332,7 +324,6 @@ footer {
             &__quote-wrapper--quote {
                 width: 70%;
                 padding-top: 1rem;
-
             }
         }
     }

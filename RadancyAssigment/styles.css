@@ -16,6 +16,8 @@
   padding: 1.5rem 1.25rem;
   max-width: 120rem;
   margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
 }
 .Hero .HeroWrapper .imageWrapper > .image {
   width: 100%;
@@ -231,6 +233,7 @@ footer .container__logos {
   flex-direction: row;
   gap: 1rem;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 footer .container__policy {
   color: rgb(136, 136, 136);
@@ -250,23 +253,8 @@ footer .container__privacy {
   .Nav {
     justify-content: start;
   }
-  .Hero .HeroWrapper .imageWrapper {
-    position: relative;
-    background-color: #fff;
-  }
-  .Hero .HeroWrapper .imageWrapper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgb(50, 122, 105);
-    width: 100%;
-    height: 100%;
-  }
   .Hero .HeroWrapper .imageWrapper .image {
-    width: 50%;
-    -webkit-clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+    background-image: url("images/hero-desktop.png");
   }
   .Hero .HeroWrapper .container__heading::after {
     width: 13%;
@@ -301,9 +289,11 @@ footer .container__privacy {
   }
 }
 @media (min-width: 1024px) {
-  .Nav .Advantages .container,
+  .Advantages .container,
 .Bylaws .container,
-.Hero .HeroWrapper .container, footer .container {
+.Hero .HeroWrapper .container,
+.Nav,
+footer .container {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
