@@ -1,0 +1,339 @@
+$green: rgb(0, 148, 95);
+$darkGreen: rgb(50,122,105);
+$fontColor: rgb(136, 136, 136);
+$buttonBgColor: rgb(233, 115, 0);
+$limeGreen: rgb(117,155,36);
+$lightGreen: rgb(235, 247, 245);
+$quotesHeadingColor: rgba(0, 158, 119, 0.839);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin container {
+    padding: 1.5rem 1.25rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+@mixin heading {
+    position: relative;
+    color: $green;
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    &::after {
+        content: '';
+        width: 20%;
+        height: 1.5rem;
+        display: flex;
+        margin: 0 auto;
+        border-bottom: 1px solid $green;
+    }
+}
+@mixin description {
+    color: $fontColor;
+    text-align: start;
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+.Nav {
+    @include container;
+    display: flex;
+    justify-content: center;
+}
+.Hero {
+    .HeroWrapper {
+        @include container;
+        .imageWrapper > .image {
+            width: 100%;
+            height: 15rem;
+            background-image: url("images/Hero.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container {
+            @include container;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            &__heading {
+                @include heading;
+            }
+            &__description {
+                @include description;
+            }
+            &__careersButton {
+                color: #ffff;
+                background-color: $buttonBgColor;
+                border: none;
+                padding: 0.75rem 1rem;
+                font-size: 1rem;
+                width: 35%;
+                margin: 2rem auto 0;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.Advantages {
+    .container {
+        @include container;
+        display: grid;
+        gap: 1rem;
+        &__line {
+            @include container;
+            position: relative;
+            padding-left: 0;
+            padding-right: 0;
+            &:last-of-type {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    width: 90%;
+                    border-bottom: unset;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 90%;
+                border-bottom: 1px solid $fontColor;
+            }
+        }
+        &__heading {
+            @include heading;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 3rem;
+            &::after {
+                width: 35%;
+                left: 30%;
+            }
+        }
+        &__subheading {
+            color: $green;
+            font-weight: 100;
+            margin-bottom: 1rem;
+        }
+        &__description {
+            color: $fontColor;
+            text-align: start;
+            font-size: 1.25rem;
+            line-height: 2rem;
+        }
+        &__learnMore {
+            text-decoration: none;
+            color: $limeGreen;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+.Bylaws {
+    .container {
+        @include container;
+        &__heading-wrapper {
+            background-color: $green;
+            padding: 1rem 0.75rem;
+            &__heading {
+                @include heading;
+                margin-bottom: 0;
+                font-size: 1.75rem;
+                color: #ffff;
+            }
+        }
+        &__description {
+            @include description;
+            background-color: $lightGreen;
+            color: $fontColor;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            padding: 0.75rem 0.85rem;
+        }
+    }
+}
+
+.Quotes {
+    .container {
+        @include container;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 2rem;
+        &__line {
+            position: relative;
+            margin: 1rem auto;
+            max-width: 120rem;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                border-bottom: 1px solid $green;
+            }
+        }
+        &__quote-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &--quote {
+                color: $fontColor;
+                text-align: center;
+                width: 50%;
+                margin-bottom: 1rem;
+                background-image: url("images/quotation-mark.png");
+                background-position: left top;
+                background-repeat: no-repeat;
+            }
+            &--name {
+                color: $quotesHeadingColor;
+                width: 50%;
+                text-align: center;
+            }
+        }
+    }
+}
+footer {
+    .container {
+        @include container;
+        &__logos {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        &__policy {
+            color: $fontColor;
+            &--link {
+                text-decoration-line: underline;
+                color: $fontColor;
+            }
+        }
+        &__privacy {
+            font-weight: 400;
+            color: #000;
+            margin: 2rem 0;
+        }
+    }
+}
+
+// Tablets
+@media (min-width:768px) {
+    .Nav {
+        justify-content: start;
+    }
+    .Hero {
+        .HeroWrapper {
+            .imageWrapper {
+                position: relative;
+                background-color: #fff;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background-color: $darkGreen;
+                    width: 100%;
+                    height: 100%;
+                }
+                .image {
+                    width: 50%;
+                    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+                }
+            }
+            .container {
+                &__heading::after {
+                    width: 13%;
+                }
+                &__careersButton {
+                    width: 20%;
+                }
+            }
+        }
+    }
+    .Advantages {
+        .container {
+            grid-template-columns: repeat(2, minmax(300px,1fr));
+            gap: 3rem;
+            &__heading {
+                grid-column: 1 / -1;
+            }
+            &__line {
+                padding-top: 0;
+                padding-bottom: 0;
+                &::after {
+                    content: "";
+                    border-bottom: unset;
+                }
+                &:nth-child(even)::after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 65%;
+                    top: 10%;
+                    right: -20px;
+                    margin-left: 1rem;
+                    border-right: 1px solid $fontColor;
+                }
+            }
+        }
+    }
+}
+
+// Laptops
+@media (min-width:1024px) {
+    .Nav .Advantages .container,
+    .Bylaws .container,
+    .Hero .HeroWrapper .container, footer .container
+    {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .Hero {
+        .HeroWrapper {
+            .imageWrapper .image {
+                height: 25rem;
+            }
+            .container {
+                &__heading {
+                    font-size: 2.5rem;
+                    &::after {
+                        width: 10%;
+                    }
+                }
+                &__careersButton {
+                    width: 15%;
+                }
+            }
+        }
+    }
+    .Advantages .container__heading::after {
+        width: 10%;
+    }
+    .Bylaws .container__description {
+        padding: 2rem 3.5rem;
+        font-size: 1.5rem;
+    }
+    .Quotes {
+        .container {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            grid-template-columns: 1fr 1.5fr 1fr;
+            &__quote-wrapper--quote {
+                width: 70%;
+                padding-top: 1rem;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,338 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Nav {
+  padding: 1.5rem 1.25rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.Hero .HeroWrapper {
+  padding: 1.5rem 1.25rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.Hero .HeroWrapper .imageWrapper > .image {
+  width: 100%;
+  height: 15rem;
+  background-image: url("images/Hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Hero .HeroWrapper .container {
+  padding: 1.5rem 1.25rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.Hero .HeroWrapper .container__heading {
+  position: relative;
+  color: rgb(0, 148, 95);
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.Hero .HeroWrapper .container__heading::after {
+  content: "";
+  width: 20%;
+  height: 1.5rem;
+  display: flex;
+  margin: 0 auto;
+  border-bottom: 1px solid rgb(0, 148, 95);
+}
+.Hero .HeroWrapper .container__description {
+  color: rgb(136, 136, 136);
+  text-align: start;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+.Hero .HeroWrapper .container__careersButton {
+  color: white;
+  background-color: rgb(233, 115, 0);
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  width: 35%;
+  margin: 2rem auto 0;
+  cursor: pointer;
+}
+
+.Advantages .container {
+  padding: 1.5rem 1.25rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+.Advantages .container__line {
+  padding: 1.5rem 1.25rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+.Advantages .container__line:last-of-type::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  border-bottom: unset;
+}
+.Advantages .container__line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  border-bottom: 1px solid rgb(136, 136, 136);
+}
+.Advantages .container__heading {
+  position: relative;
+  color: rgb(0, 148, 95);
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+.Advantages .container__heading::after {
+  content: "";
+  width: 20%;
+  height: 1.5rem;
+  display: flex;
+  margin: 0 auto;
+  border-bottom: 1px solid rgb(0, 148, 95);
+}
+.Advantages .container__heading::after {
+  width: 35%;
+  left: 30%;
+}
+.Advantages .container__subheading {
+  color: rgb(0, 148, 95);
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+.Advantages .container__description {
+  color: rgb(136, 136, 136);
+  text-align: start;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+.Advantages .container__learnMore {
+  text-decoration: none;
+  color: rgb(117, 155, 36);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1.2rem;
+}
+
+.Bylaws .container {
+  padding: 1.5rem 1.25rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.Bylaws .container__heading-wrapper {
+  background-color: rgb(0, 148, 95);
+  padding: 1rem 0.75rem;
+}
+.Bylaws .container__heading-wrapper__heading {
+  position: relative;
+  color: rgb(0, 148, 95);
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 1.75rem;
+  color: white;
+}
+.Bylaws .container__heading-wrapper__heading::after {
+  content: "";
+  width: 20%;
+  height: 1.5rem;
+  display: flex;
+  margin: 0 auto;
+  border-bottom: 1px solid rgb(0, 148, 95);
+}
+.Bylaws .container__description {
+  color: rgb(136, 136, 136);
+  text-align: start;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  background-color: rgb(235, 247, 245);
+  color: rgb(136, 136, 136);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  padding: 0.75rem 0.85rem;
+}
+
+.Quotes .container {
+  padding: 1.5rem 1.25rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 2rem;
+}
+.Quotes .container__line {
+  position: relative;
+  margin: 1rem auto;
+  max-width: 120rem;
+}
+.Quotes .container__line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid rgb(0, 148, 95);
+}
+.Quotes .container__quote-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Quotes .container__quote-wrapper--quote {
+  color: rgb(136, 136, 136);
+  text-align: center;
+  width: 50%;
+  margin-bottom: 1rem;
+  background-image: url("images/quotation-mark.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+.Quotes .container__quote-wrapper--name {
+  color: rgba(0, 158, 119, 0.839);
+  width: 50%;
+  text-align: center;
+}
+
+footer .container {
+  padding: 1.5rem 1.25rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+footer .container__logos {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+footer .container__policy {
+  color: rgb(136, 136, 136);
+}
+footer .container__policy--link {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: rgb(136, 136, 136);
+}
+footer .container__privacy {
+  font-weight: 400;
+  color: #000;
+  margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .Nav {
+    justify-content: start;
+  }
+  .Hero .HeroWrapper .imageWrapper {
+    position: relative;
+    background-color: #fff;
+  }
+  .Hero .HeroWrapper .imageWrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(50, 122, 105);
+    width: 100%;
+    height: 100%;
+  }
+  .Hero .HeroWrapper .imageWrapper .image {
+    width: 50%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+  }
+  .Hero .HeroWrapper .container__heading::after {
+    width: 13%;
+  }
+  .Hero .HeroWrapper .container__careersButton {
+    width: 20%;
+  }
+  .Advantages .container {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 3rem;
+  }
+  .Advantages .container__heading {
+    grid-column: 1/-1;
+  }
+  .Advantages .container__line {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .Advantages .container__line::after {
+    content: "";
+    border-bottom: unset;
+  }
+  .Advantages .container__line:nth-child(even)::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 65%;
+    top: 10%;
+    right: -20px;
+    margin-left: 1rem;
+    border-right: 1px solid rgb(136, 136, 136);
+  }
+}
+@media (min-width: 1024px) {
+  .Nav .Advantages .container,
+.Bylaws .container,
+.Hero .HeroWrapper .container, footer .container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .Hero .HeroWrapper .imageWrapper .image {
+    height: 25rem;
+  }
+  .Hero .HeroWrapper .container__heading {
+    font-size: 2.5rem;
+  }
+  .Hero .HeroWrapper .container__heading::after {
+    width: 10%;
+  }
+  .Hero .HeroWrapper .container__careersButton {
+    width: 15%;
+  }
+  .Advantages .container__heading::after {
+    width: 10%;
+  }
+  .Bylaws .container__description {
+    padding: 2rem 3.5rem;
+    font-size: 1.5rem;
+  }
+  .Quotes .container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
+  .Quotes .container__quote-wrapper--quote {
+    width: 70%;
+    padding-top: 1rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
