@@ -10,6 +10,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .Hero .HeroWrapper {
@@ -58,6 +59,9 @@
   line-height: 2rem;
 }
 .Hero .HeroWrapper .container__careersButton {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
   color: white;
   background-color: rgb(233, 115, 0);
   border: none;

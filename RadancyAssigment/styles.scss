@@ -43,6 +43,7 @@ $quotesHeadingColor: rgba(0, 158, 119, 0.839);
     @include container;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 
 }
 .Hero {
@@ -70,6 +71,9 @@ $quotesHeadingColor: rgba(0, 158, 119, 0.839);
                 @include description;
             }
             &__careersButton {
+                -webkit-appearance: button;
+                -moz-appearance: button;
+                appearance:button;
                 color: #ffff;
                 background-color: $buttonBgColor;
                 border: none;
